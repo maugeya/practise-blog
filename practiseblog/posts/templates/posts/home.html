@@ -5,6 +5,7 @@
 {% for post in posts.all %}
 
 <h2>{{ post.title }}</h2>
+<img src="{{ post.image.url }}" alt="">
 <p>{{ post.summary }}</p>
 <sup>{{ post.pub_date_pretty }}</sup>
 {% endfor %}
