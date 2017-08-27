@@ -5,6 +5,6 @@
 {% for post in posts.all %}
 
 <h2>{{ post.title }}</h2>
-<p>{{ post.body }}</p>
-<sup>{{ post.pub_date }}</sup>
+<p>{{ post.summary }}</p>
+<sup>{{ post.pub_date_pretty }}</sup>
 {% endfor %}
