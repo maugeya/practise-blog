@@ -7,5 +7,7 @@ from .models import Post
 def home(request):
 
     posts = Post.objects.order_by('pub_date')
-
     return render(request, 'posts/home.html', { 'posts':posts })
+
+def posts_details(request, post_id):
+    return render(request, 'posts/posts_details.html', { 'post_id':post_id})
