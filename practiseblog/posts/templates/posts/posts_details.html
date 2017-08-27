@@ -5,6 +5,9 @@
     <title>Practise Blog</title>
   </head>
   <body>
-    <p>{{ post_id }}</p>
+    <h1>{{ post.title}}</h1>
+    <img src="{{ post.image.url }}" alt="">
+    <p>{{ post.body }}</p>
+    <sup>{{ post.pub_date_pretty }}</sup>
   </body>
 </html>
