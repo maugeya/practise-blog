@@ -1,11 +1,26 @@
-<h1>Angela's Practise Blog</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<h2>Latest Posts</h2>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <title>Practise Blog</title>
+  </head>
+  <body>
+    <h1>Angela's Practise Blog</h1>
 
-{% for post in posts.all %}
+    <h2>Latest Posts</h2>
 
-<h2><a href="{% url 'posts_details' post.id %}">{{ post.title }}</a></h2>
-<img src="{{ post.image.url }}" alt="">
-<p>{{ post.summary }}</p>
-<sup>{{ post.pub_date_pretty }}</sup>
-{% endfor %}
+    {% for post in posts.all %}
+
+    <h2><a href="{% url 'posts_details' post.id %}">{{ post.title }}</a></h2>
+    <img src="{{ post.image.url }}" alt="">
+    <p>{{ post.summary }}</p>
+    <sup>{{ post.pub_date_pretty }}</sup>
+    {% endfor %}
+  </body>
+</html>
