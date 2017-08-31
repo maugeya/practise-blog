@@ -18,12 +18,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Practise Blog</a>
+        <a class="navbar-brand" href="{% url 'home' %}">Practise Blog</a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a>About</a></li>
-          <li><a>Twitter</a></li>
+          <li><a href="{% url 'about'%}">About</a></li>
+          <li><a href="http://www.twitter.com/angelamogli">Twitter</a></li>
         </ul>
       </div>
     </div>
@@ -33,7 +33,24 @@
     <img style="max-height: 400px;" class="img-responsive center-block" src="{{ post.image.url }}" alt="">
     <p>{{ post.body }}</p>
     <sup><span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{ post.pub_date_pretty }}</sup>
-  </div>
+
+    <div id="disqus_thread"></div>
+    <script>
+
+
+    var disqus_config = function () {
+    this.page.identifier = 'post-{{ post.id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://angelapractiseblog.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
 
 </body>
 </html>

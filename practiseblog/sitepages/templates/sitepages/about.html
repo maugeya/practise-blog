@@ -1,17 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Practise Blog</title>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
 
-
-
-  <title>Practise Blog</title>
 </head>
 <body>
   <nav class="navbar navbar-default">
@@ -28,29 +23,14 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="http://www.twitter.com/angelamogli
-            " target="blank">Twitter</a></li>
+          <li><a href="http://www.twitter.com/angelamogli" target="blank">Twitter</a></li>
         </ul>
       </div>
     </div>
   </nav>
   <div class="container">
-    <h1 class="text-center">Angela's Practise Blog</h1>
-
-    {% load static %}
-
-    <img style="max-height: 400px;" class="img-responsive center-block" src="{% static 'posts/home.jpg' %}" />
-
-    <h2>Latest Posts</h2>
-    <hr>
-
-    {% for post in posts.all %}
-
-    <h3><a href="{% url 'posts_details' post.id %}">{{ post.title }}</a></h3>
-    <img class="img-responsive center-block" src="{{ post.image.url }}" style="max-height: 200px; ">
-    <p>{{ post.summary }}</p>
-    <sup><span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{ post.pub_date_pretty }}</sup>
-    {% endfor %}
+    <h1>About page yo!</h1>
+    <p>Not much to see here!! Just a bit of practise at creating a blog site with django :)</p>
   </div>
 
 </body>
