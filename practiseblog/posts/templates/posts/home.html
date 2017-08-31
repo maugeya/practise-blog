@@ -36,7 +36,11 @@
     </div>
   </nav>
   <div class="container">
-    <h1>Angela's Practise Blog</h1>
+    <h1 class="text-center">Angela's Practise Blog</h1>
+
+    {% load static %}
+
+    <img style="max-height: 400px;" class="img-responsive center-block" src="{% static 'posts/home.jpg' %}" />
 
     <h2>Latest Posts</h2>
     <hr>
